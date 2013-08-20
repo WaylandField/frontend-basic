@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <style>
+            .redIcon{color:red}
+            .bigFont{font-size:20px}
+            .box{border:1px solid red}
+        </style>
+    </head>
+    <body onload='javascript: initFunc();'>
+        <div id="icon">
+            icon
+        </div>
+    </body>
+    <script>
+       var CssHelper = function(id){
+            this.id = id;
+            this.ele = document.getElementById(id);
+            if(!this.ele){
+                throw new Error('not such element');    
+            }
+        };
+        
+        CssHelper.prototype.hasClass = function(className){
+            var eleClassName = this.ele.className;
+            var cssRegExp = new RegExp('(\\s|^)'+className+'(\\s|$)', 'g');
+            return eleClassName?eleClassName.match(cssRegExp):false;
+        };
+        CssHelper.prototype.addClass = function(className){
+            if(!this.hasClass(className)){
+                this.ele.className = this.ele.className + ' ' + className;
+            }else{
+                console.log(className + 'existed');
+            }
+        };
+        
+        var initFunc = function(){
+            var iconHelper = new CssHelper('icon');
+            iconHelper.addClass('redIcon');
+            iconHelper.addClass('bigFont');
+            iconHelper.addClass('redIcon');
+            iconHelper.addClass('bigFont');
+            iconHelper.addClass('redIcon');
+            iconHelper.addClass('bigFont');
+            iconHelper.addClass('redIcon');
+            iconHelper.addClass('bigFont');
+        };
+    </script>
+</html>
