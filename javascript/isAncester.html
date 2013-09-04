@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <style>
+            .redIcon{color:red}
+            .bigFont{font-size:20px}
+            .box{border:1px solid red}
+        </style>
+    </head>
+    <body onload='javascript: initFunc();'>
+        <div id="1">
+        <div id="1-1">
+        <div id="1-1-1">
+        <div id="1-1-1-1">
+        <div id="1-1-1-1-1">
+        <div id="1-1-1-1-1-1">
+        <div id="1-1-1-1-1-1-1">
+            icon
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div id="1-2">
+            <div id="1-2-1">
+            </div>
+        </div>
+        </div>
+        </div>
+    </body>
+    <script>
+    var isAncestor =  function(ancestor, node){
+        if(!ancestor||!node){
+            throw new Error('ancestor or node not existed');
+        }
+        var parent = node.parentNode;
+        while(parent!==null){
+            if(parent === ancestor){
+                return true;
+            }
+            parent = parent.parentNode;
+        }
+        return false;
+    };
+    function initFunc(){
+        var ancestor = document.getElementById('1-1');
+        var node = document.getElementById('1-2');
+        console.log(isAncestor(ancestor, node));
+        var ancestor = document.getElementById('1-2');
+        var node = document.getElementById('1-1-1');
+        console.log(isAncestor(ancestor, node));
+        var ancestor = document.getElementById('1-1');
+        var node = document.getElementById('1');
+        console.log(isAncestor(ancestor, node));
+        var ancestor = document.getElementById('1-1-1-1');
+        var node = document;
+        console.log(isAncestor(ancestor, node));
+        var ancestor = document;
+        var node = document.getElementById('1-1-1-1');
+        console.log(isAncestor(ancestor, node));
+        var ancestor = null;
+        var node = null;
+        console.log(isAncestor(ancestor, node));
+    }
+    </script>
+</html>

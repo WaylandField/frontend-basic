@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <style>
+        .container{
+            border:1px solid red;
+            zoom:1;
+        }
+        .child{
+            float:left;
+        }
+        .clearfix:before, .clearfix:after{
+            content:"";
+            clear:both;
+            display:block;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="container clearfix">
+            <div class="child">
+                try me
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+    <head>
+        <style>
+            
+            .offscreen {
+                    position: absolute;
+                    margin-top: -333px;
+                }
+        </style>
+    </head>
+    <body>
+    <ul>
+            <li><a href="#" accesskey="h">Home</a></li>
+            <li><a href="#" accesskey="1">Company</a></li>
+            <li><a href="#" accesskey="2">Services</a></li>
+            <li><a href="#" accesskey="3">Cases</a></li>
+            <li><a href="#" accesskey="4">Contact</a></li>
+        </ul>
+        
+        <div id="name" class="offscreen">see the name</div>
+        <div id="description">read the description</div>
+        <div>ignored me</div>
+        <input aria-labelledby="name" aria-describedby="description" name="asdf">
+        
+    <div role="application">
+        <ul>
+            <li><a href="#">first link</a></li>
+            <li><a href="#" aria-labelledby="name" aria-describedby="description">link content</a></li>
+        </ul>
+    
+    <div id="billing">Billing Address</div>
+
+<div>
+    <div id="name">Name</div>
+    <input type="text" aria-labelledby="name billing"/>
+</div>
+<div>
+    <div id="address">Address</div>
+    <input type="text" aria-labelledby="address billing"/>
+</div>
+        <div role="main" aria-labelledby="foo">
+           <h1 id="foo">Wild fires spread across the San Diego Hills</h1>
+           Strong winds expand fires ignited by high temperatures ...
+        </div>
+        
+        <div id="radio_label">My radio label</div>
+<ul role="radiogroup" aria-labelledby="radio_label">
+    <li role="radio">Item #1</li>
+    <li role="radio">Item #2</li>
+    <li role="radio">Item #3</li>
+</ul>
+</div>
+    </body>
+    <script language="javascript">
+        setTimeout(function() {
+var myAlert = document.createElement("p");
+myAlert.setAttribute("role", "alert");
+var myAlertText = document.createTextNode("You must agree with our terms of service to create an account.");
+myAlert.appendChild(myAlertText);
+document.body.appendChild(myAlertText); 
+        }, 10000);
+
+    </script>
+</html>

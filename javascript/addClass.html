@@ -14,7 +14,12 @@
     <script>
        var CssHelper = function(id){
             this.id = id;
-            this.ele = document.getElementById(id);
+            console.log(this.id);
+            if(this.id.constructor === String){
+                this.ele = document.getElementById(id);
+            }else if(this.id.nodeType){
+                this.ele = this.id;
+            }
             if(!this.ele){
                 throw new Error('not such element');    
             }
@@ -34,7 +39,8 @@
         };
         
         var initFunc = function(){
-            var iconHelper = new CssHelper('icon');
+            var icon = document.getElementById('icon');
+            var iconHelper = new CssHelper(icon);
             iconHelper.addClass('redIcon');
             iconHelper.addClass('bigFont');
             iconHelper.addClass('redIcon');
