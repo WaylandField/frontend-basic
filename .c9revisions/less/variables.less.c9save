@@ -1,0 +1,3 @@
+{"ts":1378714285370,"silentsave":true,"restoring":false,"patch":[[]],"length":0}
+{"contributors":[],"silentsave":false,"ts":1378714326392,"patch":[[{"diffs":[[1,"@bc-color: #fff;\n"]],"start1":0,"start2":0,"length1":0,"length2":17}]],"length":17,"saved":false}
+{"ts":1378714342074,"patch":[[{"diffs":[[0,"c-color:"],[1," #000;\n@fr-color:"],[0," #fff;\n"]],"start1":2,"start2":2,"length1":15,"length2":32}]],"length":34,"saved":false}

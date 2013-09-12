@@ -1,0 +1,44 @@
+.navigation{
+    margin: 0;
+    padding:0;
+    list-style: none;
+    border:1px solid gray;
+}
+.navigation:before, .navigation:after{
+    /** clear fix **/
+    content:"";
+    display:block;
+    clear:both;
+    /** for ie<=7 **/
+    *zoom:1;
+}
+.navi-pills{
+    
+}
+.navi-pills > li{
+    float:left;
+    padding:10px;
+    margin:0;
+}
+.navigation > .pull-right{
+    float:right;
+}
+.navigation li{
+    
+}
+.navigation li a{
+    display: block;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    padding:10px;
+}
+.navigation li a:hover, .navigation li a:active, .navigation li a:focus, .navigation li a:visited{
+    background-color: red;
+    color: #ffffff;
+}
+.navi-pills .active a, .navi-pills .active a:hover, .navi-pills .active a:active,
+.navi-pills .active a:focus, .navi-pills .active a:visited{
+    background-color: blue;
+    color: #ffffff;
+}

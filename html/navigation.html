@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <style>
+            .navigation{
+                margin: 0;
+                padding:0;
+                list-style: none;
+                border:1px solid gray;
+            }
+            .navigation:before, .navigation:after{
+                /** clear fix **/
+                content:"";
+                display:block;
+                clear:both;
+                /** for ie<=7 **/
+                *zoom:1;
+            }
+            .navi-pills{
+                
+            }
+            .navi-pills > li{
+                float:left;
+                padding:10px;
+                margin:0;
+            }
+            .navigation > .pull-right{
+                float:right;
+            }
+            .navigation li{
+                
+            }
+            .navigation li a{
+                display: block;
+                -moz-border-radius: 4px;
+                -webkit-border-radius: 4px;
+                border-radius: 4px;
+                padding:10px;
+                color: #000;
+            }
+            .navigation li a:hover, .navigation li a:active, .navigation li a:focus{
+                background-color: red;
+                color: #ffffff;
+            }
+            .navi-pills .active a, .navi-pills .active a:hover, .navi-pills .active a:active,
+            .navi-pills .active a:focus, .navi-pills .active a:visited{
+                background-color: blue;
+                color: #ffffff;
+            }
+        </style>
+    </head>
+    <body>
+        <ul class="navigation pull-right navi-pills">
+            <li class="active">
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">Navi 1</a>
+            </li>
+            <li>
+                <a href="#">Navi 2</a>
+            </li>
+            <li>
+                <a href="#">Navi 3</a>
+            </li>
+        </ul>
+    </body>
+</html>
