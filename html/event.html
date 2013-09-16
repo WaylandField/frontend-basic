@@ -1,14 +1,16 @@
 <html>
 <head></head>
 <body>
-<div onclick="javascript:monitor()" style="padding:10px;background-color:gray">
-<div onclick="javascript:monitor()" style="padding:10px;background-color:white">
+<div id="container" onclick="javascript:monitor(event)" onmouseover="javascript:monitor(event)" style="padding:10px;background-color:gray">
+<div ="child" onclick="javascript:monitor(event)" onmouseover="javascript:monitor(event)" style="padding:10px;background-color:white">
 
 </div>
 </div>
 </body>
 <script>
 function monitor(event){
-alert(event.bubbles);
+console.log(event.bubbles);
+console.log(event.target.id);
+console.log(event.relatedTarget.id);
 }
 </script></html>
